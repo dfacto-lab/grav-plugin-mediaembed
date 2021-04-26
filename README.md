@@ -14,7 +14,8 @@
 
 ## Project Information:
 
-**This plugin is outdated. It does not work with Grav v1.x.x+ and cannot be administrated via Admin plugin without any problems. If you like this project, any help, pull request, or ideas are much appreciated.**
+
+**This plugin is a fork from https://github.com/sommerregen/grav-plugin-mediaembed it has been upgraded to work withe grav 1.x.x**
 
 **Status:** Seeking co-maintainer(s), Maintenance fixes only
 
