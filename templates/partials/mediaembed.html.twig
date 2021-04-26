@@ -80,17 +80,15 @@
     {% elseif oembed.type == "video" %}
       <a href="{{ oembed.getEmbedCode }}" alt="{{ mediaembed.raw.alt }}" title="{{ mediaembed.raw.title }}" class="mediaembed-media"{{ lazyload_script }}>
         {# JavaScript lazy-loading #}
-        <!--
-        <iframe class="mediaembed-embed" src="{{ oembed.getEmbedCode }}" width="{{ width }}" height="{{ height }}" frameborder="0" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-          <p>Your browser does not support iframes.</p>
-        </iframe>
-        -->
 
         {# Show Thumbnail #}
         {% if default.preview and oembed.thumbnail %}
           <img src="{{ oembed.thumbnail }}" alt="{{ mediaembed.raw.alt }}" title="{{ mediaembed.raw.title }}" class="mediaembed-thumbnail" />
         {% else %}
-          {# Show placeholder #}
+          {# Show ifrmae #}
+          <iframe class="mediaembed-embed" src="{{ oembed.getEmbedCode }}" width="{{ width }}" height="{{ height }}" frameborder="0" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            <p>Your browser does not support iframes.</p>
+          </iframe>
         {% endif %}
 
         {# Toggle for loading iframe content #}

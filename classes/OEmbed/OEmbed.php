@@ -149,20 +149,22 @@ class OEmbed implements OEmbedInterface
    */
   protected function validId($id)
   {
+
     $endpoint = $this->config->get('endpoint', '');
     $endpoint = $this->format($endpoint, ['{:id}' => $id]);
-
     if (!$id || !$endpoint) {
-      return false;
+        return false;
     }
 
     $response = \Requests::head($endpoint);
+
     // If a head request fails, try to send a get request
     if ($response->status_code != 200) {
       $response = \Requests::get($endpoint);
     }
 
-    if ( $response->status_code == 401 ) {
+
+      if ( $response->status_code == 401 ) {
       throw new \Exception('Embedding has been disabled for this media.');
     } elseif ( $response->status_code == 404 ) {
       throw new \Exception('The media ID was not found.');

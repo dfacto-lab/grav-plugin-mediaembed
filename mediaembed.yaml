@@ -27,13 +27,13 @@ services:
     example: "https://soundcloud.com/semiseria/verruckert-ausschnitt"
 
     # URL of media service used for embedding
-    url: "w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/{:id}"
+    url: "w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/{:id}"
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://soundcloud.com/{:id}"
+    canonical: "https://soundcloud.com/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://soundcloud.com/oembed?url={:canonical}&format=json"
+    endpoint: "https://soundcloud.com/oembed?url={:canonical}&format=json"
 
     # Schemes to grab media id
     schemes:
@@ -61,7 +61,7 @@ services:
     type: "rich"            # Type of the media service
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://open.spotify.com/track/{:id}"
+    canonical: "https://open.spotify.com/track/{:id}"
 
     # Endpoint to grab media informations
     endpoint: "https://embed.spotify.com/oembed/?url={:canonical}&format=json"
@@ -77,10 +77,10 @@ services:
     type: "photo"           # Type of the media service
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://www.flickr.com/photos/{:id}"
+    canonical: "https://www.flickr.com/photos/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://flickr.com/services/oembed?url={:canonical}&format=json"
+    endpoint: "https://flickr.com/services/oembed?url={:canonical}&format=json"
 
     # Schemes to grab media id
     schemes:
@@ -92,10 +92,10 @@ services:
     type: "rich"           # Type of the media service
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://imgur.com/gallery/{:id}"
+    canonical: "https://imgur.com/gallery/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://api.imgur.com/oembed?url={:canonical}&format=json"
+    endpoint: "https://api.imgur.com/oembed?url={:canonical}&format=json"
 
     # Schemes to grab media id
     schemes:
@@ -108,10 +108,10 @@ services:
     type: "rich"            # Type of the media service
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://instagram.com/p/{:id}"
+    canonical: "https://instagram.com/p/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://api.instagram.com/oembed?url={:canonical}&format=json"
+    endpoint: "https://api.instagram.com/oembed?url={:canonical}&format=json"
 
     # Schemes to grab media id
     schemes:
@@ -127,10 +127,10 @@ services:
     url: "www.dailymotion.com/embed/video/{:id}"
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://dailymotion.com/video/{:id}"
+    canonical: "https://dailymotion.com/video/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://www.dailymotion.com/services/oembed?url={:canonical}&format=json"
+    endpoint: "https://www.dailymotion.com/services/oembed?url={:canonical}&format=json"
 
     schemes:              # Regex filter ("~REGEX~i") to grab media id
       - "dailymotion.com/video/*"
@@ -149,10 +149,10 @@ services:
     url: "www.youtube.com/embed/{:id}"
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://www.youtube.com/watch?v={:id}"
+    canonical: "https://www.youtube.com/watch?v={:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://www.youtube.com/oembed?url={:canonical}&format=json"
+    endpoint: "https://www.youtube.com/oembed?url={:canonical}&format=json"
 
     # Regex filters ("~REGEX~i") to grab media id
     schemes:
@@ -176,7 +176,7 @@ services:
     canonical: "https://vimeo.com/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://vimeo.com/api/oembed.json?url={:canonical}"
+    endpoint: "https://vimeo.com/api/oembed.json?url={:canonical}"
 
     schemes:              # Regex filter ("~REGEX~i") to grab media id
       - "vimeo.com/*"
@@ -209,10 +209,10 @@ services:
     type: "rich"            # Type of the media service
 
     # Canonical URL of media service (used in endpoint calls)
-    canonical: "http://slides.com/{:id}"
+    canonical: "https://slides.com/{:id}"
 
     # Endpoint to grab media informations
-    endpoint: "http://slides.com/{:id}"
+    endpoint: "https://slides.com/{:id}"
 
     # Schemes to grab media id
     schemes:
