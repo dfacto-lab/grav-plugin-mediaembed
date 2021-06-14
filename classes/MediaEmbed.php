@@ -132,7 +132,7 @@ class MediaEmbed
 
     $regex = "~
     (               # wrap whole match in $1
-      !?\\[
+      !\\[
         (?P<alt>.*?)       # alt text = $2
       \\]
       \\(           # literal paren

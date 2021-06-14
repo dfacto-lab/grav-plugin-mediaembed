@@ -47,7 +47,7 @@
 
   {# Recompute aspect ratio #}
   {% set ratio = height / width %}
-  {% set container_styles = "padding-bottom: " ~ "%.2f"|format(ratio * 100) ~ "%;" %}
+  {% set container_styles = "padding-bottom: " ~ "%.2F"|format(ratio * 100) ~ "%;" %}
 
   {# Embed responsive OEmbed media #}
   {% if default.responsive %}
